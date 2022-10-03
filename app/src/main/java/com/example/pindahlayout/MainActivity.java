@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
     Button Btnpindah;
+    EditText etnama;
 
 
 
@@ -21,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("sebelum pindah");
 
         Btnpindah=findViewById(R.id.btn_pindah);
+        etnama nama=findViewById(R.id.et_nama);
         Btnpindah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent pindah= new Intent(MainActivity.this, secondActivity.class);
-                startActivity(pindah);
+                
                 Intent p= new Intent(MainActivity.this,secondActivity.class);
                 startActivity(p);
             }
