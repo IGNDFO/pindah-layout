@@ -14,6 +14,6 @@ public class secondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-
+        getSupportActionBar().setTitle("sesudah pindah");
     }
 }

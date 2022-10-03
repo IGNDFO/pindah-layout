@@ -11,10 +11,14 @@ public class MainActivity extends AppCompatActivity {
 
     Button Btnpindah;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setTitle("sebelum pindah");
 
         Btnpindah=findViewById(R.id.btn_pindah);
         Btnpindah.setOnClickListener(new View.OnClickListener() {
@@ -25,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent p= new Intent(MainActivity.this,secondActivity.class);
                 startActivity(p);
             }
-            
+
         });
     }
 }
