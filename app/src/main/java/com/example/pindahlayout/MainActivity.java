@@ -11,7 +11,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     Button Btnpindah;
-    EditText etnama;
+    EditText Etnama;
 
 
 
@@ -21,17 +21,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().setTitle("sebelum pindah");
-
+/*ekspilif*/
         Btnpindah=findViewById(R.id.btn_pindah);
-        etnama nama=findViewById(R.id.et_nama);
+        Etnama =findViewById(R.id.et_nama);
         Btnpindah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
-                Intent p= new Intent(MainActivity.this,secondActivity.class);
-                startActivity(p);
-            }
+                String nama = Etnama.getText().toString();
+                if (nama.trim().equals("")) {
+                    Etnama.setError("HARUS ISI NAMA");
+                }
+                else {
+                    Intent p = new Intent(MainActivity.this, secondActivity.class);
+                    p.putExtra("xnama",nama);
+                    startActivity(p);
 
+
+                }
+            }
         });
     }
 }
